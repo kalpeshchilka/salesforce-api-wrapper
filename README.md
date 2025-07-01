@@ -101,26 +101,17 @@ src/
   });
 ```
 
-### Example usage in E2E Tests repo
+### Example usage in E2E Cypress Tests repo
 
 ```js
 //Creating an account
-  let accountDetails = {
-    "Account_Status__c": "active",
-    "Channel_Type__c": "REA",
-    "Name": "sf-agency-" + faker.person.firstName() + Cypress.dayjs(),
-    "State_Region__c": "Dubai",
-    "Type_of_Company__c": "Agency"
-  }
-
   cy.sf('createRecord', {
     token: Cypress.env('SALESFORCE_TOKEN'),
-    objectType: "account",
-    body: accountDetails
-  }).then(
-    (accountResponse) => {
-      expect(accountResponse.status).to.be.equal(201);
-    });
+    objectType: "Account",
+    body: { Name: "Test Account", ... }
+  }).then((res) => {
+    expect(res.status).to.eq(201);
+  });
 ```
 
 ### Direct API Use Example
@@ -135,11 +126,10 @@ cy.task('createLead', ({ token, body }) =>
 
 ## 🛠️ Environment Variables
 
-Make sure to have Salesforce env variables in your test repo:
+Make sure to have valid Salesforce env variables in your test repo:
 
 ```bash
 .env.example
 ```
-Make sure to configure your Salesforce credentials accordingly.
 
 ---
