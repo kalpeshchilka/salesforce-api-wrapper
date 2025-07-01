@@ -49,7 +49,7 @@ src/
 ```js
 //package.json
   "dependencies": {
-    "@kalpeshchilka/salesforce-api-wrapper": "1.1.3"
+    "@kalpeshchilka/salesforce-api-wrapper": "1.1.6"
   }
 ```
 
