@@ -1,0 +1,17 @@
+{
+  "name": "@kalpeshchilka/salesforce-api-wrapper",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "version": "1.1.5",
+  "description": "Salesforce API automation helper",
+  "main": "index.js",
+  "type": "module",
+  "author": "Kalpesh Chilka",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.5.0"
+  }
+}
+  
